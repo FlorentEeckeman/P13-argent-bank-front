@@ -5,7 +5,7 @@ import styled from "styled-components";
 import Ticket from "../../Components/Ticket";
 import { useDispatch, useSelector } from "react-redux";
 import { getUserInfos, setUserInfos } from "../../Utils/userInfos";
-import { addUserInfos } from "../../Feature/userInfoSlice";
+import { addUserInfos } from "../../Store/userSlice";
 import { useForm } from "react-hook-form";
 
 const UserPage = () => {

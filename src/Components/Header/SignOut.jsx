@@ -4,9 +4,9 @@ import { faRightFromBracket } from "@fortawesome/free-solid-svg-icons";
 import { useNavigate } from "react-router-dom";
 import styled from "styled-components";
 import { useDispatch, useSelector } from "react-redux";
-import { removeUserInfos } from "../../Feature/userInfoSlice";
-import { removeToken } from "../../Feature/counterSlice";
-import { persistor } from "../../Utils/store";
+import { removeUserInfos } from "../../Store/userSlice";
+import { removeToken } from "../../Store/tokenSlice";
+import { persistor } from "../../Store/store";
 
 const SignOut = () => {
   const navigate = useNavigate();
