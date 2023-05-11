@@ -6,14 +6,17 @@ import styled from "styled-components";
 import { useDispatch, useSelector } from "react-redux";
 import { removeUserInfos } from "../../Feature/userInfoSlice";
 import { removeToken } from "../../Feature/counterSlice";
+import { persistor } from "../../Utils/store";
 
 const SignOut = () => {
   const navigate = useNavigate();
   const dispatch = useDispatch();
   const dataReturn = useSelector((state) => state);
   const logout = () => {
+    persistor.purge();
     dispatch(removeToken());
     dispatch(removeUserInfos());
+
     console.log("test logout");
     console.log(dataReturn);
     navigate("/");
