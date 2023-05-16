@@ -15,13 +15,11 @@ const UserPage = () => {
   const {
     register,
     handleSubmit,
-    watch,
     formState: { errors },
   } = useForm();
   const token = useSelector((state) => state.token.value);
   getUserInfos(token)
     .then((data) => {
-      //console.log("token :" + token + " data : " + data);
       dispatch(addUserInfos(data));
     })
     .catch((err) => console.log(err));
@@ -29,10 +27,6 @@ const UserPage = () => {
   const formUserInfos = (data) => {
     dispatch(setUserInfos(token, data));
   };
-  /*console.log(useSelector((state) => state));
-  console.log(selector);
-  console.log(useSelector((state) => state.token));
-*/
   let button;
   if (edit === false) {
     button = <button onClick={() => setEdit(!edit)}>Edit Name</button>;

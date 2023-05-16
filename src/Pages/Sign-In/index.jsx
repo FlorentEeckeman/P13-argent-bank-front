@@ -19,20 +19,17 @@ const SignIn = () => {
   } = useForm();
   const dispatch = useDispatch();
   const selector = useSelector((state) => state.token);
-  console.log(selector);
   const onSubmit = async (data) => {
     await handleSubmitForm(data.username, data.password)
       .then((token) => {
-        // console.log(token);
         dispatch(addToken(token));
-
         navigate("/profile");
       })
       .then(() => console.log(selector))
       .catch((err) => console.log(err));
   };
   const navigate = useNavigate();
-  console.log(watch("username")); // watch input value by passing the name of it
+  console.log(watch("username"));
   return (
     <Div>
       <Header />

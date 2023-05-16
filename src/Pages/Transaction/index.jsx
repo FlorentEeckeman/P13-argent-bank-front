@@ -2,9 +2,7 @@ import React from "react";
 import Header from "../../Components/Header";
 import Footer from "../../Components/Footer";
 import styled from "styled-components";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-//onClick={() => navigate("/sign-in")}
 const Transaction = () => {
   return (
     <Div>

@@ -7,11 +7,8 @@ import FeatureIcon from "../../Components/FeatureIcon";
 import iconChat from "../../Assets/img/icon-chat.png";
 import iconMoney from "../../Assets/img/icon-money.png";
 import iconSecurity from "../../Assets/img/icon-security.png";
-import { useSelector } from "react-redux";
 
 const Home = () => {
-  const selector = useSelector((state) => state);
-  console.log(selector);
   return (
     <Div>
       <Header />

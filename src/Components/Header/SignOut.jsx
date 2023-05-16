@@ -11,14 +11,10 @@ import { persistor } from "../../Store/store";
 const SignOut = () => {
   const navigate = useNavigate();
   const dispatch = useDispatch();
-  const dataReturn = useSelector((state) => state);
   const logout = () => {
     persistor.purge();
     dispatch(removeToken());
     dispatch(removeUserInfos());
-
-    console.log("test logout");
-    console.log(dataReturn);
     navigate("/");
   };
 

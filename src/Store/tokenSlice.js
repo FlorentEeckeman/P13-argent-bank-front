@@ -10,7 +10,6 @@ export const tokenSlice = createSlice({
   initialState,
   reducers: {
     addToken: (state, action) => {
-      //console.log(action.payload);
       state.value = action.payload;
     },
     removeToken: (state) => {
